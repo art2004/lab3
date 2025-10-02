@@ -81,17 +81,24 @@ class Fibonacci:
 # print(f"Только текущая дата: {now.date()}")
 # print(f"Только текущее время: {now.time()}")
 
-# 9. # Разница в днях
+# 9. Разница в днях
 
-birth_date = datetime(2004, 12, 24)
-today = datetime.now() # Текущая дата и время
+# birth_date = datetime(2004, 12, 24)
+# today = datetime.now() # Текущая дата и время
+#
+#
+# days_passed = (today - birth_date).days
+# print(f"Дней прошло с момента рождения: {days_passed}")
+#
+# next_birthday = datetime(today.year, 12, 24)
+# if today > next_birthday:
+#     next_birthday = datetime(today.year + 1, 12, 24)
+# days_to_birthday = (next_birthday - today).days
+# print(f"Дней до следующего дня рождения: {days_to_birthday}")
 
+# 10. Форматирование даты
+def format_date(dt):
+    return dt.strftime("Сегодня %d %B %Y года, время: %H:%M")
 
-days_passed = (today - birth_date).days
-print(f"Дней прошло с момента рождения: {days_passed}")
-
-next_birthday = datetime(today.year, 12, 24)
-if today > next_birthday:
-    next_birthday = datetime(today.year + 1, 12, 24)
-days_to_birthday = (next_birthday - today).days
-print(f"Дней до следующего дня рождения: {days_to_birthday}")
+sample_date = datetime.now()
+print(format_date(sample_date))
