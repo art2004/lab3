@@ -1,5 +1,6 @@
 from decimal import Decimal, ROUND_HALF_UP
 from fractions import Fraction
+from datetime import datetime
 # 1. Создайте список квадратов этих чисел, используя list comprehension
 squares = [x ** 2 for x in range(1, 11)]
 # print(squares)
@@ -66,10 +67,16 @@ class Fibonacci:
 # print(f"Прибыль: {profit} руб.")
 
 # 7. Дроби
-a = Fraction(3, 4)
-b = Fraction(5, 6)
+# a = Fraction(3, 4)
+# b = Fraction(5, 6)
+#
+# print(f"Сложение: {a + b}")
+# print(f"Вычитание: {a - b}")
+# print(f"Умножение: {a * b}")
+# print(f"Деление: {a / b}")
 
-print(f"Сложение: {a + b}")
-print(f"Вычитание: {a - b}")
-print(f"Умножение: {a * b}")
-print(f"Деление: {a / b}")
+# 8. Текущая дата
+now = datetime.now()
+print(f"Текущая дата и время: {now}")
+print(f"Только текущая дата: {now.date()}")
+print(f"Только текущее время: {now.time()}")
