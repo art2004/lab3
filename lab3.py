@@ -1,5 +1,5 @@
 from decimal import Decimal, ROUND_HALF_UP
-
+from fractions import Fraction
 # 1. Создайте список квадратов этих чисел, используя list comprehension
 squares = [x ** 2 for x in range(1, 11)]
 # print(squares)
@@ -50,17 +50,26 @@ class Fibonacci:
     #print(num)
 # 6.  Посчитать вклад
 
-P = Decimal(input('Введите начальную сумму вклада: '))
-r = Decimal(input('Введите процентную ставку. Пример 7.5: '))
-t = Decimal(input('Введите срок в годах: '))
+# P = Decimal(input('Введите начальную сумму вклада: '))
+# r = Decimal(input('Введите процентную ставку. Пример 7.5: '))
+# t = Decimal(input('Введите срок в годах: '))
+#
+# # Формула: S = P * (1 + r/(12*100))^(t*12)
+# monthly_rate = (r / Decimal('1200'))  # Делим на 1200, чтобы получить месячную ставку
+# S = P * (Decimal('1') + monthly_rate) ** (t * Decimal('12'))
+# S = S.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)  # Округление до копеек
+#
+# profit = S - P
+# profit = profit.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)
+#
+# print(f"Итоговая сумма: {S} руб.")
+# print(f"Прибыль: {profit} руб.")
 
-# Формула: S = P * (1 + r/(12*100))^(t*12)
-monthly_rate = (r / Decimal('1200'))  # Делим на 1200, чтобы получить месячную ставку
-S = P * (Decimal('1') + monthly_rate) ** (t * Decimal('12'))
-S = S.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)  # Округление до копеек
+# 7. Дроби
+a = Fraction(3, 4)
+b = Fraction(5, 6)
 
-profit = S - P
-profit = profit.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)
-
-print(f"Итоговая сумма: {S} руб.")
-print(f"Прибыль: {profit} руб.")
+print(f"Сложение: {a + b}")
+print(f"Вычитание: {a - b}")
+print(f"Умножение: {a * b}")
+print(f"Деление: {a / b}")
