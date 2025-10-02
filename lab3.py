@@ -76,7 +76,22 @@ class Fibonacci:
 # print(f"Деление: {a / b}")
 
 # 8. Текущая дата
-now = datetime.now()
-print(f"Текущая дата и время: {now}")
-print(f"Только текущая дата: {now.date()}")
-print(f"Только текущее время: {now.time()}")
+# now = datetime.now()
+# print(f"Текущая дата и время: {now}")
+# print(f"Только текущая дата: {now.date()}")
+# print(f"Только текущее время: {now.time()}")
+
+# 9. # Разница в днях
+
+birth_date = datetime(2004, 12, 24)
+today = datetime.now() # Текущая дата и время
+
+
+days_passed = (today - birth_date).days
+print(f"Дней прошло с момента рождения: {days_passed}")
+
+next_birthday = datetime(today.year, 12, 24)
+if today > next_birthday:
+    next_birthday = datetime(today.year + 1, 12, 24)
+days_to_birthday = (next_birthday - today).days
+print(f"Дней до следующего дня рождения: {days_to_birthday}")
